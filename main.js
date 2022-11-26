@@ -37,10 +37,15 @@ function onSubmit(e) {
   // push data on crud
   axios
   .post("https://crudcrud.com/api/58eaf34b940746f6b2af374f2a34d94f/appointmentdata",userdetails)
-  .then(response=>console.log(response))
+  .then((response)=>
+        {
+        console.log(response);
+     ShowUser(response.data);
+    
+  })
   .catch(err=>console.log(err));
   
-  ShowUser(userdetails);
+ 
   }
 
 // show user on screen
